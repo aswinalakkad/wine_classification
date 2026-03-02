@@ -28,7 +28,7 @@ def main():
     st.title('Wine Classification')
     st.subheader('This application classifies wine based on chemical constituents.')
 
-    alc = st.number_input('Alcohol')
+    alc = st.number_input('Enter Alcohol percentage:', format="%.4f")
     mal_acid = st.number_input('Malic Acid')
     ash = st.number_input('Ash')
     alc_ash = st.number_input('Alcalinity of Ash')
@@ -59,3 +59,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
