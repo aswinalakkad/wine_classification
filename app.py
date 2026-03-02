@@ -36,30 +36,55 @@ def prediction(input_data):
 # -----------------------------
 def main():
     st.title("🍷 Wine Classification App")
-    st.subheader("Classify wine based on chemical properties")
+    st.subheader("Classify wine based on its chemical properties")
 
-    st.write("Enter the chemical properties below:")
-
-    # Create two columns for better UI
-    col1, col2 = st.columns(2)
-
-    with col1:
-        alc = st.number_input("Alcohol", value=None, placeholder="e.g. 13.2")
-        mal_acid = st.number_input("Malic Acid", value=None)
-        ash = st.number_input("Ash", value=None)
-        alc_ash = st.number_input("Alcalinity of Ash", value=None)
-        mag = st.number_input("Magnesium", value=None)
-        phe = st.number_input("Total Phenols", value=None)
-        fla = st.number_input("Flavanoids", value=None)
-        nfla = st.number_input("Nonflavanoid Phenols", value=None)
-        pro = st.number_input("Proanthocyanins", value=None)
-        co_i = st.number_input("Color Intensity", value=None)
-        hue = st.number_input("Hue", value=None)
-        od = st.number_input("OD280/OD315", value=None)
-        proline = st.number_input("Proline", value=None)
+    st.write("Please enter all the values below:")
 
     # -----------------------------
-    # Predict Button
+    # Input Fields (Single Column)
+    # -----------------------------
+
+    alc = st.number_input("Alcohol", value=None)
+    st.caption("Alcohol percentage present in wine.")
+
+    mal_acid = st.number_input("Malic Acid", value=None)
+    st.caption("Amount of malic acid in the wine.")
+
+    ash = st.number_input("Ash", value=None)
+    st.caption("Total ash content of wine.")
+
+    alc_ash = st.number_input("Alcalinity of Ash", value=None)
+    st.caption("Alkalinity level of the ash.")
+
+    mag = st.number_input("Magnesium", value=None)
+    st.caption("Magnesium concentration.")
+
+    phe = st.number_input("Total Phenols", value=None)
+    st.caption("Total phenolic compounds present.")
+
+    fla = st.number_input("Flavanoids", value=None)
+    st.caption("Amount of flavanoids in wine.")
+
+    nfla = st.number_input("Nonflavanoid Phenols", value=None)
+    st.caption("Non-flavanoid phenolic compounds.")
+
+    pro = st.number_input("Proanthocyanins", value=None)
+    st.caption("Proanthocyanin concentration.")
+
+    co_i = st.number_input("Color Intensity", value=None)
+    st.caption("Intensity of wine color.")
+
+    hue = st.number_input("Hue", value=None)
+    st.caption("Hue value of the wine.")
+
+    od = st.number_input("OD280/OD315", value=None)
+    st.caption("OD280/OD315 ratio of diluted wine.")
+
+    proline = st.number_input("Proline", value=None)
+    st.caption("Proline concentration in wine.")
+
+    # -----------------------------
+    # Prediction Button
     # -----------------------------
     if st.button("Predict"):
         inputs = [
@@ -68,9 +93,8 @@ def main():
             hue, od, proline
         ]
 
-        # Check if any field is empty
         if None in inputs:
-            st.warning("⚠️ Please fill all input fields.")
+            st.warning("⚠️ Please fill all fields before predicting.")
         else:
             try:
                 input_array = np.array([inputs], dtype=float)
@@ -78,7 +102,7 @@ def main():
                 st.success(f"Predicted Class: {result}")
 
             except Exception as e:
-                st.error("Something went wrong during prediction.")
+                st.error("Error during prediction.")
                 st.write(e)
 
 
@@ -87,4 +111,3 @@ def main():
 # -----------------------------
 if __name__ == "__main__":
     main()
-
