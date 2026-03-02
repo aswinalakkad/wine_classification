@@ -12,7 +12,7 @@ This app uses a supervised classification model with LDA (Linear Discriminant An
 
 ## Live Demo
 
-🔗 *(Add your Streamlit deployment link here)*
+🔗 https://wine-classification-01.streamlit.app/#wine-classification-app
 
 ## Features
 
