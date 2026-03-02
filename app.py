@@ -41,79 +41,79 @@ def main():
     alc = st.number_input(
         "Alcohol",
         value=None,
-        help="Alcohol percentage present in wine"
+        placeholder="Alcohol percentage present in wine"
     )
 
     mal_acid = st.number_input(
         "Malic Acid",
         value=None,
-        help="Amount of malic acid in wine"
+        placeholder="Amount of malic acid in wine"
     )
 
     ash = st.number_input(
         "Ash",
         value=None,
-        help="Total ash content"
+        placeholder="Total ash content"
     )
 
     alc_ash = st.number_input(
         "Alcalinity of Ash",
         value=None,
-        help="Alkalinity level of ash"
+        placeholder="Alkalinity level of ash"
     )
 
     mag = st.number_input(
         "Magnesium",
         value=None,
-        help="Magnesium concentration"
+        placeholder="Magnesium concentration"
     )
 
     phe = st.number_input(
         "Total Phenols",
         value=None,
-        help="Total phenolic compounds"
+        placeholder="Total phenolic compounds"
     )
 
     fla = st.number_input(
         "Flavanoids",
         value=None,
-        help="Amount of flavanoids"
+        placeholder="Amount of flavanoids"
     )
 
     nfla = st.number_input(
         "Nonflavanoid Phenols",
         value=None,
-        help="Non-flavanoid phenolic compounds"
+        placeholder="Non-flavanoid phenolic compounds"
     )
 
     pro = st.number_input(
         "Proanthocyanins",
         value=None,
-        help="Proanthocyanin concentration"
+        placeholder="Proanthocyanin concentration"
     )
 
     co_i = st.number_input(
         "Color Intensity",
         value=None,
-        help="Wine color intensity"
+        placeholder="Wine color intensity"
     )
 
     hue = st.number_input(
         "Hue",
         value=None,
-        help="Hue value of wine"
+        placeholder="Hue value of wine"
     )
 
     od = st.number_input(
         "OD280/OD315",
         value=None,
-        help="OD ratio of diluted wine"
+        placeholder="OD ratio of diluted wine"
     )
 
     proline = st.number_input(
         "Proline",
         value=None,
-        help="Proline concentration"
+        placeholder="Proline concentration"
     )
 
     if st.button("Predict"):
@@ -133,3 +133,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
