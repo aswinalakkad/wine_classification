@@ -1,6 +1,4 @@
-Here's a README for your Wine Classification project:
 
----
 
 # 🍷 Wine Classification App
 
