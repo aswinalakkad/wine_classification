@@ -51,8 +51,6 @@ def main():
         mag = st.number_input("Magnesium", value=None)
         phe = st.number_input("Total Phenols", value=None)
         fla = st.number_input("Flavanoids", value=None)
-
-    with col2:
         nfla = st.number_input("Nonflavanoid Phenols", value=None)
         pro = st.number_input("Proanthocyanins", value=None)
         co_i = st.number_input("Color Intensity", value=None)
@@ -89,3 +87,4 @@ def main():
 # -----------------------------
 if __name__ == "__main__":
     main()
+
